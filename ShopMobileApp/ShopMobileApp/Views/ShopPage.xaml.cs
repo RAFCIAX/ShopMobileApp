@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Timers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,7 +18,14 @@ namespace ShopMobileApp.Views
             this.BindingContext = this;
         }
 
+        private Timer timer;
+
         public List<Banner> Banners { get => GetBanners(); }
+
+        public List<Product> CollectionsList { get => GetCollections(); }
+
+        public List<Product> TrendsList { get => GetTrends(); }
+
 
 
         private List<Banner> GetBanners()
@@ -29,6 +36,50 @@ namespace ShopMobileApp.Views
             bannerList.Add(new Banner { Heading = "ELEGANT COLLECTION", Message = "20% Discount", Caption = "UNIQUE COMBINATIONS OF ITEMS", Image = "WIPP.png" });
             return bannerList;
         }
+
+        private List<Product> GetCollections()
+        {
+            var trendList = new List<Product>();
+            trendList.Add(new Product { Image = "WIP.png", Name = "Floral Bag + Hat", Price = "123.50" });
+            trendList.Add(new Product { Image = "WIPP.png", Name = "Satchel Bag", Price = "49.99" });
+            trendList.Add(new Product { Image = "WIP.png", Name = "Leather Bag", Price = "40.99" });
+            return trendList;
+        }
+
+        private List<Product> GetTrends()
+        {
+            var colList = new List<Product>();
+            colList.Add(new Product { Image = "WIP.png", Name = "Beige Heeled Shoe", Price = "109.99" });
+            colList.Add(new Product { Image = "WIPP.png", Name = "Shoe + Addons", Price = "225.99" });
+            return colList;
+        }
+
+        protected override void OnAppearing()
+        {
+            timer = new Timer(TimeSpan.FromSeconds(5).TotalMilliseconds) { AutoReset = true, Enabled = true };
+            timer.Elapsed += Timer_Elapsed;
+            base.OnAppearing();
+        }
+
+        protected override void OnDisappearing()
+        {
+            timer?.Dispose();
+            base.OnDisappearing();
+        }
+
+        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                if (cvBanners.Position == 2)
+                {
+                    cvBanners.Position = 0;
+                    return;
+                }
+
+                cvBanners.Position += 1;
+            });
+        }
     }
 
     public class Banner
@@ -38,4 +89,15 @@ namespace ShopMobileApp.Views
         public string Caption { get; set; }
         public string Image { get; set; }
     }
+
+
+    public class Product
+    {
+        public string Image { get; set; }
+        public string Name { get; set; }
+        public string Price { get; set; }
+    }    
+
+
+
 }

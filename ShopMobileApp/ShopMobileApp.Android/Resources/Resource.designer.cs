@@ -15020,6 +15020,12 @@ namespace ShopMobileApp.Droid
 			// aapt resource value: 0x7F070094
 			public const int watermark = 2131165332;
 			
+			// aapt resource value: 0x7F070095
+			public const int WIP = 2131165333;
+			
+			// aapt resource value: 0x7F070096
+			public const int WIPP = 2131165334;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
