@@ -86,7 +86,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\BluzaElpolakoMiejskiTy.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShopMobileApp\ShopMobileApp.csproj">
       <Project>{4D6C8A13-690B-40EE-84BC-49F9CD426344}</Project>
