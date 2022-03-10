@@ -11,8 +11,11 @@
                     <DataTemplate>
                         <Grid Margin="15,5" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="285">
                             <Image Source="{Binding Image}" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                            <Image Source="WIP.png" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                            <Label Text="{Binding Title}" TextColor="White" FontSize="35" Margin="10,20" VerticalOptions="Center"/>
+                            <Image Source="overlayCol.png" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                            <StackLayout>
+                                <Label Text="{Binding Title}" TextColor="White" FontSize="35" Margin="15"/>
+                                <Label Text="{Binding Price}" TextColor="#E2DEA9" FontSize="35" FontAttributes="Bold" Margin="10" HorizontalTextAlignment="End" VerticalOptions="EndAndExpand"/>
+                            </StackLayout>
                         </Grid>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
