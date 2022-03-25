@@ -82,6 +82,11 @@ namespace ShopMobileApp.Views
                 cvBanners.Position += 1;
             });
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ItemPage());
+        }
     }
 
     public class Banner

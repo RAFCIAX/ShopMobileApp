@@ -47,7 +47,8 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Text="Recently added items" TextColor="Black" FontSize="20"/>
-                    <Label Text="Show all" TextColor="Black" FontSize="14" VerticalOptions="Center" Opacity="0.5" HorizontalOptions="End" Margin="0,0,30,0"/>
+                    <Button Text="Show all" BackgroundColor="White" TextColor="Black" FontSize="14" VerticalOptions="Center" Opacity="0.5" HorizontalOptions="End" Margin="0,0,30,0"
+                            Clicked="Button_Clicked"/>
                     <ScrollView Orientation="Horizontal" Grid.Row="1" VerticalOptions="Start" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
                         <StackLayout BindableLayout.ItemsSource="{Binding CollectionsList}" Orientation="Horizontal" Spacing="20" VerticalOptions="Start">
                             <BindableLayout.ItemTemplate>
@@ -70,7 +71,7 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Text="Bestsellers" TextColor="Black" FontSize="20"/>
-                    <Label Text="Show all" TextColor="Black" FontSize="14" VerticalOptions="Center" Opacity="0.5" HorizontalOptions="End" Margin="0,0,30,0"/>
+                    <Button BackgroundColor="White" Text="Show all" TextColor="Black" FontSize="14" VerticalOptions="Center" Opacity="0.5" HorizontalOptions="End" Margin="0,0,30,0"/>
                     <ScrollView Orientation="Horizontal" Grid.Row="1" VerticalOptions="Start" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
                         <StackLayout Orientation="Horizontal" BindableLayout.ItemsSource="{Binding TrendsList}" Spacing="15" VerticalOptions="Start">
                             <BindableLayout.ItemTemplate>
