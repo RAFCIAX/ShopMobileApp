@@ -23,10 +23,16 @@ namespace ShopMobileApp.Views
         private List<Category> GetCategories()
         {
             var catList = new List<Category>();
-            catList.Add(new Category { Image = "BluzaElpolakoMiejskiTy.jpg", Title = "SUMMER COLLECTION", Caption = "BEST DISCOUNT THIS SEASON" });
-            catList.Add(new Category { Image = "BluzaElpolakoMiejskiTy.jpg", Title = "WOMEN'S CLOTHING", Caption = "UP TO 50% OFF ON EVERY ITEM" });
-            catList.Add(new Category { Image = "BluzaElpolakoMiejskiTy.jpg", Title = "ELEGANT CLOTHINGS", Caption = "UNIQUE COLLECTIONS AND STYLES" });
+            catList.Add(new Category { Image = "Mechanic.jpg", Title = "SCHEDULE AN APPOINTMENT", Caption = "Meet with specialist and fix ehatever you need" });
+            catList.Add(new Category { Image = "Taxi.jpg", Title = "BOOK A RIDE", Caption = "Now easier than ever" });
+            catList.Add(new Category { Image = "CarPartsCar.jpg", Title = "ORDER PARTS", Caption = "Access to our biggest warehouses" });
+            catList.Add(new Category { Image = "CarRental.jpg", Title = "RENT A CAR", Caption = "Best quality, fully insured - satisaction guranteed" });
             return catList;
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Warinig", "Service unavailible at the moment", "OK");
         }
     }
 

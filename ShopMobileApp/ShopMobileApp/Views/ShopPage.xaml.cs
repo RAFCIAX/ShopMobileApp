@@ -12,6 +12,7 @@ namespace ShopMobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ShopPage : ContentPage
     {
+
         public ShopPage()
         {
             InitializeComponent();
@@ -83,9 +84,9 @@ namespace ShopMobileApp.Views
             });
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void ItemClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ItemPage());
+            DisplayAlert("Warinig", "Item could not be found", "OK");
         }
     }
 

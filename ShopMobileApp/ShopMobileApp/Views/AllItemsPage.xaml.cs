@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace ShopMobileApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CollectionsPage : ContentPage
+    public partial class AllItemsPage : ContentPage
     {
         
 
-        public CollectionsPage()
+        public AllItemsPage()
         {
             InitializeComponent();
             this.BindingContext = this;
@@ -67,6 +67,11 @@ namespace ShopMobileApp.Views
 
 
             return colList;
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Warning", "Item could not be found", "OK");
         }
     }
 

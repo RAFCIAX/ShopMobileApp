@@ -29,11 +29,11 @@
         <Tab Title="Main Page" Icon="MainPageIcon.png">
             <ShellContent ContentTemplate="{DataTemplate views:ShopPage}"/>
         </Tab>
-        <Tab Title="Explore" Icon="WIPP.png">
+        <Tab Title="Explore" Icon="MagnGlassIcon.png">
             <ShellContent ContentTemplate="{DataTemplate views:ExplorePage}"/>
         </Tab>
         <Tab Title="All Items" Icon="ItemsIcon2.png">
-            <ShellContent ContentTemplate="{DataTemplate views:CollectionsPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:AllItemsPage}"/>
         </Tab>
         <!--<Tab Title="Profile" Icon="WIPP.png">
             <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}"/>

@@ -47,15 +47,15 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Text="Recently added items" TextColor="Black" FontSize="20"/>
-                    <Button Text="Show all" BackgroundColor="White" TextColor="Black" FontSize="14" VerticalOptions="Center" Opacity="0.5" HorizontalOptions="End" Margin="0,0,30,0"
-                            Clicked="Button_Clicked"/>
                     <ScrollView Orientation="Horizontal" Grid.Row="1" VerticalOptions="Start" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
                         <StackLayout BindableLayout.ItemsSource="{Binding CollectionsList}" Orientation="Horizontal" Spacing="20" VerticalOptions="Start">
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>
                                     <StackLayout VerticalOptions="Start">
                                         <Frame Padding="0" HasShadow="False" HorizontalOptions="Start" VerticalOptions="Start" CornerRadius="10" HeightRequest="150" WidthRequest="150">
-                                            <Image Source="{Binding Image}" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                            <Grid RowDefinitions="auto" ColumnDefinitions="auto">
+                                                <ImageButton Grid.Row="1" Grid.Column="1" Source="{Binding Image}" HorizontalOptions="Center" VerticalOptions="Center" Clicked="ItemClicked"/>
+                                            </Grid>
                                         </Frame>
                                         <Label Text="{Binding Name}" TextColor="Black" FontSize="15"/>
                                         <Label Text="{Binding Price}" Margin="0,-7,0,0" TextColor="#62153B" FontSize="12"/>
@@ -65,27 +65,27 @@
                         </StackLayout>
                     </ScrollView>
                 </Grid>
+                
                 <Grid Grid.Row="1" RowSpacing="20" Margin="30,0,0,30" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Text="Bestsellers" TextColor="Black" FontSize="20"/>
-                    <Button BackgroundColor="White" Text="Show all" TextColor="Black" FontSize="14" VerticalOptions="Center" Opacity="0.5" HorizontalOptions="End" Margin="0,0,30,0"/>
                     <ScrollView Orientation="Horizontal" Grid.Row="1" VerticalOptions="Start" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
                         <StackLayout Orientation="Horizontal" BindableLayout.ItemsSource="{Binding TrendsList}" Spacing="15" VerticalOptions="Start">
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>
                                     <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Start" WidthRequest="220">
                                         <Frame Padding="0" HasShadow="False" HorizontalOptions="Start" VerticalOptions="Start" CornerRadius="10" HeightRequest="150" WidthRequest="150">
-                                            <Image Source="{Binding Image}" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                            <Grid RowDefinitions="auto" ColumnDefinitions="auto">
+                                                <ImageButton Grid.Row="1" Grid.Column="1" Source="{Binding Image}" HorizontalOptions="Center" VerticalOptions="Center" Clicked="ItemClicked"/>
+                                            </Grid>
                                         </Frame>
                                         <StackLayout Margin="0,12,0,0">
                                             <Label Text="{Binding Name}" TextColor="Black" FontSize="15"/>
                                             <Label Text="{Binding Price}" Margin="0,-7,0,0" TextColor="#62153B" FontSize="12"/>
                                             <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
-                                                <!--<Image Source="WIP.png" Aspect="Fill" VerticalOptions="Center" WidthRequest="15" HeightRequest="15"/>
-                                                <Label Text="ADD TO CART" TextColor="Black" FontSize="10" Opacity="0.6" VerticalOptions="Center"/>-->
                                             </StackLayout>
                                         </StackLayout>
                                     </StackLayout>
