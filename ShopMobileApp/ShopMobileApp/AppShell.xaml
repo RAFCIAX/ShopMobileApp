@@ -35,9 +35,6 @@
         <Tab Title="All Items" Icon="ItemsIcon2.png">
             <ShellContent ContentTemplate="{DataTemplate views:AllItemsPage}"/>
         </Tab>
-        <!--<Tab Title="Profile" Icon="WIPP.png">
-            <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}"/>
-        </Tab>-->
     </TabBar>
     
 </Shell>

@@ -31,10 +31,6 @@
                 </DataTemplate>
             </cv:CarouselViewControl.ItemTemplate>
         </cv:CarouselViewControl>
-        <!--<StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="End" Margin="30,20">
-            <ImageButton Source="E36.jpg" Aspect="AspectFit" HeightRequest="32" WidthRequest="30" VerticalOptions="Center"/>   Koszyk i ulubione
-            <ImageButton Source="WIP.png" Aspect="AspectFit" HeightRequest="32" WidthRequest="30" VerticalOptions="Center"/>
-        </StackLayout>-->
         <ScrollView Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Grid RowSpacing="30" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
                 <Grid.RowDefinitions>
